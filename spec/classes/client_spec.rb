@@ -45,6 +45,10 @@ describe 'nfs::client' do
     let(:facts) { {:operatingsystem => 'Amazon', :operatingsystemrelease =>  '4.1.7-15.23.amzn1.x86_64' } }
     it { should contain_class('nfs::client::redhat') }
   end
+  context "operatingsysten => Amazon Linux 2" do
+    let(:facts) { {:operatingsystem => 'Amazon', :operatingsystemrelease =>  '2' } }
+    it { should contain_class('nfs::client::redhat') }
+  end
   context "operatingsysten => gentoo" do
     let(:facts) { {:operatingsystem => 'gentoo', } }
     it { should contain_class('nfs::client::gentoo') }
