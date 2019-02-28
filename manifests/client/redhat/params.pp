@@ -21,6 +21,10 @@ class nfs::client::redhat::params {
     /^[34]\.(\d|-|\.)+(amzn){1}/: {
       $osmajor = 6
     }
+    # Amazon linux 2 operatingsystemrelease
+    /^2\.\d+/: {
+      $osmajor = 7
+    }
     # TODO: workaround for Fedora
     /^\d{2,}/: {
       $osmajor = 7
