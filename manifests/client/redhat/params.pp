@@ -22,7 +22,7 @@ class nfs::client::redhat::params {
       $osmajor = 6
     }
     # Amazon linux 2 operatingsystemrelease
-    2: {
+    /^2/: {
       $osmajor = 7
     }
     # TODO: workaround for Fedora
